@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SAMPLE</title>
+
+    <style>
+
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        #layout1 {
+            border: 3px solid lightblue;
+            max-width: 800px;
+            margin: auto;
+        }
+
+        header {
+            background-color: lightgoldenrodyellow;
+            padding: 20px;
+            text-align: center;
+        }
+
+        header h1 {
+            margin: 0;
+        }
+
+        nav {
+            max-width: 800px;
+            height: 300px;
+            background: radial-gradient(circle,pink 5%, khaki 40%, lightgoldenrodyellow);
+            transition: 1s;
+        }
+
+        nav:hover {
+            transform: rotate(5deg);
+            background: radial-gradient(circle, rgb(238, 235, 253),rgb(202, 202, 255), rgb(159, 159, 216))
+        }
+
+        #layout2 {
+            display: flex;
+        }
+
+        #layout2 p {
+            margin: 0;
+        }
+
+        #layout2 p::first-letter {
+            font-size: 2rem;
+            border: 1px solid pink;
+            background: rgba(0, 0, 255, 0.5);
+            border-radius: 50%;
+        }
+
+        #layout2 p:hover::first-letter {
+            background-color: green;
+        }
+
+        main {
+            background-color: rgb(173, 221, 166);
+            padding: 20px;
+            text-align: center;
+            flex: 2;
+        }
+
+        main p {
+            transition: 1s;
+        }
+
+        main p:hover {
+            background-color: red;
+        }
+
+        main h2 {
+            margin: 0;
+        }
+
+        aside {
+            background-color: khaki;
+            padding: 20px;
+            text-align: center;
+            flex: 1;
+        }
+
+        aside h3 {
+            margin: 0;
+        }
+
+        footer {
+            background-color: mistyrose;
+            padding: 20px;
+            text-align: center;
+        }
+
+        footer h3 {
+            margin: 0;
+        }
+
+        @media (max-width: 550px) {
+            #layout2 {
+                flex-direction: column;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div id="layout1">
+        <header>
+            <h1>HEADER</h1>
+        </header>
+        <nav></nav>
+        <div id="layout2">
+            <main>
+                <h2>MAIN</h2>
+                <p>모든 국민은 헌법과 법률이 정한 법관에 의하여 법률에 의한 재판을 받을 권리를 가진다. 대통령은 국무회의의 의장이 되고, 국무총리는 부의장이 된다.</p>
+
+                <p>법률이 정하는 주요방위산업체에 종사하는 근로자의 단체행동권은 법률이 정하는 바에 의하여 이를 제한하거나 인정하지 아니할 수 있다. 선거에 관한 경비는 법률이 정하는 경우를 제외하고는
+                    정당 또는 후보자에게 부담시킬 수 없다.</p>
+
+                <p>대한민국의 경제질서는 개인과 기업의 경제상의 자유와 창의를 존중함을 기본으로 한다. 대통령은 제3항과 제4항의 사유를 지체없이 공포하여야 한다. 대통령이 궐위되거나 사고로 인하여
+                    직무를 수행할 수 없을 때에는 국무총리, 법률이 정한 국무위원의 순서로 그 권한을 대행한다.</p>
+            </main>
+            <aside>
+                <h3>ASIDE</h3>
+                <p>국회의원은 국가이익을 우선하여 양심에 따라 직무를 행한다. 헌법개정안이 제2항의 찬성을 얻은 때에는 헌법개정은 확정되며, 대통령은 즉시 이를 공포하여야 한다.</p>
+
+                <p>대통령은 국가의 독립·영토의 보전·국가의 계속성과 헌법을 수호할 책무를 진다. 대통령은 국민의 보통·평등·직접·비밀선거에 의하여 선출한다. 제안된 헌법개정안은 대통령이 20일 이상의
+                    기간 이를 공고하여야 한다.</p>
+
+                <p>각급 선거관리위원회의 조직·직무범위 기타 필요한 사항은 법률로 정한다. 국회는 국민의 보통·평등·직접·비밀선거에 의하여 선출된 국회의원으로 구성한다.</p>
+
+
+            </aside>
+        </div>
+        <footer>
+            <h3>FOOTER</h3>
+        </footer>
+    </div>
+</body>
+
+</html>

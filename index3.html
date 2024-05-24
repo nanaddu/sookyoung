@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>Page Layout</title>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+        }
+
+        html,
+        body {
+            font: 13pt 나눔고딕;
+        }
+
+        body {
+            max-width: 900px;
+            margin: auto;
+        }
+
+        h1,
+        h2 {
+            font-size: 1rem;
+        }
+
+        main h1 {
+            display: none;
+        }
+
+        header {
+            height: 50pt;
+            background: skyblue;
+            transition: 1s;
+            cursor: pointer;
+        }
+
+        header:hover {
+            background-color: lightcoral;
+        }
+
+        section {
+            height: 200pt;
+            background: gold;
+            transition: 1s;
+            cursor: pointer;
+        }
+
+        section:hover {
+            background-color: pink;
+            transform: rotate(45deg);
+            border-radius: 50%;
+        }
+
+        section:hover h2 {
+            display: none;
+        }
+
+        article {
+            height: 100pt;
+            background: linear-gradient(to left, pink, lightseagreen);
+            transition: 1s;
+            cursor: pointer;
+        }
+
+        article:hover {
+            background: linear-gradient(to right, pink, lightseagreen);
+            transform: rotate(-45deg);
+            border-radius: 50%;
+        }
+
+        article:hover h2 {
+            display: none;
+        }
+
+        aside {
+            height: 50pt;
+            background: gray;
+            transition: 1s;
+            cursor: pointer;
+        }
+
+        aside:hover {
+            background-color: lightseagreen;
+            transform: translateY(-50px);
+        }
+
+        footer {
+            height: 30pt;
+            background: brown;
+            transition: 1s;
+            cursor: pointer;
+        }
+
+        footer:hover {
+            background-color: lightsalmon;
+        }
+
+
+        b {
+            color: red;
+            font-weight: normal;
+            border: 1px dotted blue;
+            padding: 20px;
+            border-radius: 25%;
+            background: rgba(158, 255, 145, 0.5);
+            /* opacity: 0.5; */
+            display: inline-block;
+            transition: 1s;
+        }
+
+        b:hover {
+            transform: rotate(15deg);
+        }
+
+        @media all and (min-width:600pt) {
+            #main_aside {
+                display: flex;
+                height: 300pt
+            }
+
+            main {
+                flex-grow: 3;
+            }
+
+            aside {
+                flex-grow: 1;
+                height: 100%;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <h1>상단</h1>
+    </header>
+    <div id="main_aside">
+        <main>
+            <h1>메인영역</h1>
+            <section>
+                <h2>일반<b>정보</b></h2>
+            </section>
+            <article>
+                <h2>기사<b>정보</b></h2>
+            </article>
+        </main>
+        <aside>
+            <h2>부가<b>정보</b></h2>
+        </aside>
+    </div>
+    <footer>
+        <h1>하단</h1>
+    </footer>
+</body>
+
+</html>

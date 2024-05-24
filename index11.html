@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>samples</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        .main {
+            max-width: 70vw;
+            height: 70vh;
+            border: 3px solid lightpink;
+            transition: 1s;
+            display: flex;
+            margin: auto;
+            margin-top: 5%;
+        }
+
+        section {
+            flex: 2;
+            background-color: bisque;
+            transition: 1s;
+        }
+
+        section:hover {
+            background-color: coral;
+        }
+
+        aside {
+            flex: 1;
+            background-color: salmon;
+            transition: 1s;
+        }
+
+        aside:hover {
+            background-color: crimson;
+        }
+
+        @media (max-width: 550px) {
+            .main {
+                flex-direction: column;
+            }
+        }
+
+    </style>
+
+</head>
+<body>
+    <div class="main">
+        <section></section>
+        <aside></aside>
+    </div>
+</body>
+</html>

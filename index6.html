@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Noto+Serif+KR:wght@200..900&family=Poetsen+One&display=swap');
+
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        #layout01 {
+            border: 3px solid green;
+            max-width: 900px;
+            margin: auto;
+        }
+
+        header {
+            background-color: pink;
+            padding: 20px;
+            text-align: center;
+            transition: 1s;
+        }
+
+        header h1 {
+            font-family: "Noto Serif KR", serif;
+            font-weight: 800;
+            color: #FFF;
+        }
+
+        header:hover {
+            background-color: tomato;
+        }
+
+        nav {
+            padding: 15px;
+        }
+
+        nav ul {
+            display: flex;
+            padding-left: 0s;
+            max-width: 700px;
+            margin: auto;
+            padding: 50px 0;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+
+        nav ul li {
+            list-style: none;
+            /* flex: 1; */
+            text-align: center;
+            flex-basis:140px;
+        }
+
+        nav ul li a {
+            text-decoration: none;
+            color: pink;
+            font-weight: bold;
+            transition: 1s;
+            font-family: "Poetsen One", sans-serif;
+        }
+
+        nav ul li a:hover {
+            opacity: 0.4;
+        }
+
+        #layout02 {
+            display: flex;
+        }
+
+        main {
+            flex: 2.5;
+        }
+
+        main section {
+            background-color: bisque;
+            transition: 1s;
+            padding: 20px;
+        }
+
+        main section:hover {
+            transform: rotate(-45deg);
+        }
+
+        main article {
+            background-color: lightgoldenrodyellow;
+            transition: 1s;
+            padding: 20px;
+        }
+
+        main article:hover {
+            transform: rotate(45deg);
+        }
+
+        aside {
+            background-color: #d8eaff;
+            flex: 1;
+            transition: 1s;
+            padding: 20px;
+        }
+
+        aside:hover {
+            background: linear-gradient(180deg, tomato , gold);
+        }
+
+        @media(max-width:550px) {
+            #layout02 {
+                flex-direction: column;
+            }
+
+            nav li:nth-child(4), nav li:nth-child(5) {
+                /* display: none; */
+            }
+        }
+
+        .poetsen-one-regular {
+            font-family: "Poetsen One", sans-serif;
+            font-weight: 400;
+            font-style: normal;
+        }
+
+        .noto-serif-kr-<uniquifier> {
+            font-family: "Noto Serif KR", serif;
+            font-optical-sizing: auto;
+            font-weight: <weight>;
+            font-style: normal;
+        }
+
+        h2 , h3 {
+            font-family: "Noto Serif KR", serif;
+            font-size: 17px;
+            font-weight: 800;
+        }
+
+        footer {
+            padding: 20px;
+            text-align: center;
+            background: linear-gradient(180deg, orange, yellow);
+            font-family: "Noto Serif KR", serif;
+            font-size: 17px;
+            font-weight: 800;
+            transition: 1s;
+        }
+
+        footer:hover {
+            background: linear-gradient(0deg, orange, yellow);
+        }
+    </style>
+</head>
+
+<body>
+    <div id="layout01">
+        <header>
+            <h1>마크업 첫걸음</h1>
+        </header>
+
+        <nav>
+            <ul>
+                <li><a href="#"> MENU 1</a></li>
+                <li><a href="#"> MENU 2</a></li>
+                <li><a href="#"> MENU 3</a></li>
+                <li><a href="#"> MENU 4</a></li>
+                <li><a href="#"> MENU 5</a></li>
+            </ul>
+        </nav>
+
+        <div id="layout02">
+            <main>
+                <section>
+                    <h2><p>국회나 그 위원회의 요구가 있을 때에는 국무총리·국무위원 또는 정부위원은 출석·답변하여야 하며, 국무총리 또는 국무위원이 출석요구를 받은 때에는 국무위원 또는 정부위원으로 하여금 출석·답변하게 할 수 있다.</p>
+
+                        <p>공무원의 직무상 불법행위로 손해를 받은 국민은 법률이 정하는 바에 의하여 국가 또는 공공단체에 정당한 배상을 청구할 수 있다. 이 경우 공무원 자신의 책임은 면제되지 아니한다.</p>
+                        
+                        <p>이 헌법은 1988년 2월 25일부터 시행한다. 다만, 이 헌법을 시행하기 위하여 필요한 법률의 제정·개정과 이 헌법에 의한 대통령 및 국회의원의 선거 기타 이 헌법시행에 관한 준비는 이 헌법시행 전에 할 수 있다.</p>
+                        
+                        <p>군인은 현역을 면한 후가 아니면 국무위원으로 임명될 수 없다. 국가는 평생교육을 진흥하여야 한다. 대통령의 선거에 관한 사항은 법률로 정한다. 법원은 최고법원인 대법원과 각급법원으로 조직된다.</p>
+                                                
+                        </h2>
+                </section>
+                <article>
+                    <h2><p>국회는 법률에 저촉되지 아니하는 범위안에서 의사와 내부규율에 관한 규칙을 제정할 수 있다. 민주평화통일자문회의의 조직·직무범위 기타 필요한 사항은 법률로 정한다.</p>
+
+                        <p>대통령은 헌법과 법률이 정하는 바에 의하여 국군을 통수한다. 나는 헌법을 준수하고 국가를 보위하며 조국의 평화적 통일과 국민의 자유와 복리의 증진 및 민족문화의 창달에 노력하여 대통령으로서의 직책을 성실히 수행할 것을 국민 앞에 엄숙히 선서합니다.</p>
+                        
+                        <p>국정감사 및 조사에 관한 절차 기타 필요한 사항은 법률로 정한다. 대한민국의 주권은 국민에게 있고, 모든 권력은 국민으로부터 나온다. 중앙선거관리위원회는 법령의 범위안에서 선거관리·국민투표관리 또는 정당사무에 관한 규칙을 제정할 수 있으며, 법률에 저촉되지 아니하는 범위안에서 내부규율에 관한 규칙을 제정할 수 있다.</p>
+                        
+                        </h2>
+                </article>
+            </main>
+            <aside>
+                <h3><p>의무교육은 무상으로 한다. 국가원로자문회의의 조직·직무범위 기타 필요한 사항은 법률로 정한다. 군인 또는 군무원이 아닌 국민은 대한민국의 영역안에서는 중대한 군사상 기밀·초병·초소·유독음식물공급·포로·군용물에 관한 죄중 법률이 정한 경우와 비상계엄이 선포된 경우를 제외하고는 군사법원의 재판을 받지 아니한다.</p>
+
+                    <p>국회의원은 현행범인인 경우를 제외하고는 회기중 국회의 동의없이 체포 또는 구금되지 아니한다. 대통령이 궐위된 때 또는 대통령 당선자가 사망하거나 판결 기타의 사유로 그 자격을 상실한 때에는 60일 이내에 후임자를 선거한다.</p>
+                    
+                    <p>대통령은 조국의 평화적 통일을 위한 성실한 의무를 진다. 연소자의 근로는 특별한 보호를 받는다. 대한민국의 주권은 국민에게 있고, 모든 권력은 국민으로부터 나온다.</p>
+
+                    </h3>
+            </aside>
+        </div>
+        <footer>하단 구역</footer>
+    </div>
+</body>
+
+</html>

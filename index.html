@@ -3,129 +3,66 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>sample</title>
-
-    <style>
-        * {
-            padding: 0;
-            margin: 0;
-        }
-
-        .can {
-            max-width: 700px;
-            min-height: 80vh;
-            margin: auto;
-            background-color: lightsteelblue;
-            margin: auto;
-            justify-content: center;
-            align-items: flex-start;
-            padding: 20px;
-        }
-
-        .can:hover {
-            background-color: bisque;
-        }
-
-        .id , main {
-            box-sizing: border-box;
-        }
-
-        form {
-            max-width: 300px;
-            text-align: center;
-        }
-
-        form [type="text"] {
-            padding: 5px;
-            border-radius: 25px;
-            border: 1px solid #ddd;
-            text-align: center;
-            margin-bottom: 3px;
-        }
-
-        form [type="submit"] {
-            margin: auto;
-            display: block;
-            padding: 10px;
-            background-color: rgb(160, 202, 160);
-            border: 1px solid #ddd;
-            border-radius: 10px;
-        }
-
-        h2 {
-            max-width: 100vw;
-            padding: 20px; 
-        }
-
-        form [type="radio"] {
-            margin-bottom: 30px;
-        }
-
-        .can {
-            display: flex;
-        }
-
-        footer {
-            height: 300px;
-            padding: 20px;
-            max-width: 70vw;
-            box-sizing: border-box;
-            margin: auto;
-            display: none;
-        }
-        
-        @media (max-width: 500px) {
-            .can {
-                flex-direction: column;
-            }
-            
-            .can > * {
-                width: 100vw;
-            }
-
-            footer { 
-                margin: auto;
-            }
-        }
-    </style>
+    <title>SAMPLE</title>
+    <link rel="stylesheet" href="/style.css">
 </head>
-<body>
-    <div class="can">
-        <div class="id">
-            <h2>이름 입력</h2>
-            <form action="/action_page.php">
-                <label for="fname">First name:</label>
-                <input type="text" id="fname" name="fname" placeholder="KIM"><br>
-                <label for="lname">Last name:</label>
-                <input type="text" id="lname" name="lname" placeholder="SOOKYOUNG"><br><br>
-                <input type="submit" value="Submit">
-              </form> 
-        </div>
 
+<body>
+    <div id="layout">
+        <header>
+            <nav>
+                <ul>
+                    <li><a href="#" class="main">MENU 1</a>
+                        <ul class="sub">
+                            <li><a href="#">SUB 1</a></li>
+                            <li id="red"><a href="#" onclick="red1()">SUB 2</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#" class="main">MENU 2</a>
+                        <ul class="sub">
+                            <li><a href="#">SUB 1</a></li>
+                            <li><a href="#">SUB 2</a></li>
+                            <li><a href="#">SUB 3</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#" class="main">MENU 3</a>
+                        <ul class="sub">
+                            <li><a href="#">SUB 1</a></li>
+                            <li><a href="#">SUB 2</a></li>
+                            <li><a href="#">SUB 3</a></li>
+                            <li id="blue"><a href="#">SUB 4</a></li>
+                            <li><a href="#">SUB 5</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#" class="main">MENU 4</a>
+                        <ul class="sub">
+                            <li id="pink"><a href="#" onclick="pink1()">SUB 1</a></li>
+                            <li><a href="#">SUB 2</a></li>
+                            <li><a href="#">SUB 3</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#" class="main">MENU 5</a>
+                        <ul class="sub">
+                            <li><a href="#">SUB 1</a></li>
+                            <li><a href="#">SUB 2</a></li>
+                            <li><a href="#">SUB 3</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </nav>
+        </header>
         <main>
-            <h2>이메일 수신 동의</h2>
-            <form action="#">
-                <input type="radio" id="yes" name="e">
-                <label for="email">YES</label>
-                <input type="radio" id="no" name="e">
-                <label for="email">NO</label>
-                <input type="submit" value="SEND">
-            </form>
-            <input type="checkbox" name="hobby" value="m">등산<br>
-            <input type="checkbox" name="hobby" value="f">낚시<br>
-            <input type="checkbox" name="hobby" value="v">영화감상<br><br>
-            <input type="color"><br>
-            <input type="date"><br>
-            <input type="email"><br>
-            <input type="file"><br>
-            <input type="hidden"><br>
-            <input type="image" src="/images/button.png"><br>
-            <input type="number" min="23" max="200"><br>
-            <input type="range"><br>
-            <input type="search"><br>
-            <input type="tel"><br>
+            <img src="images/summer.jpg">
         </main>
+        <footer></footer>
+        <section id="notice">
+            <h3>NOTICE</h3>
+            <button type="button" onclick="close1()">CLOSE</button>
+        </section>
+        
+        <button type="button" onclick="open1()">OPEN</button>
     </div>
-    <footer><h2>FOOTER</h2></footer>
+
+    <script src="/click.js"></script>
 </body>
 </html>

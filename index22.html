@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SAMPLE</title>
+
+    <style>
+
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        nav {
+            margin: auto;
+            max-width: 900px;
+            border: 2px solid #1A4D2E;
+            border-radius: 25px;
+            padding: 80px;
+            margin-top: 5%;
+            background-color: #4F6F52;
+        }
+
+        nav > ul {
+            display: flex;
+            box-sizing: border-box;
+            justify-content: space-around;
+        }
+
+
+        nav ul li {
+            list-style: none;
+            /* flex: 1; */
+            text-align: center;
+            /*flex-basis: 25%;*/
+            position: relative;
+        }
+
+        nav .main {
+            background-color: #E8DFCA;
+            padding: 10px 90px;
+            border-radius: 10px;
+            color: #006769;
+            font-weight: bold;
+            transition: 1s;
+            display: inline-block;
+        }
+
+        nav .main:hover {
+            cursor: pointer;
+            opacity: 0.8;
+        }
+
+        nav li a {
+            text-decoration: none;
+            color: #006769;
+        }
+
+        nav > ul > li> ul {
+            margin-top: 30px;
+            height: 0;
+            overflow: hidden;
+        }
+
+        nav > ul > li> ul > li {
+            padding: 10px;
+            background-color: #F5EFE6;
+            border-radius: 10px;
+            margin-bottom: 5px;
+            transition: 1s;
+        }
+
+        nav > ul > li> ul > li > a {
+            color: #006769;
+            font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        .sub {
+            position: absolute;
+            z-index: 99999;
+        }
+
+        .sub li {
+            padding: 10px 100px;
+        }
+
+        .sub > li:hover{
+            background-color: #1A4D2E;
+            color: #fff;
+        }
+
+        .sub > li a:hover{
+            color: #fff;
+        }
+
+        nav > ul > li .sub {
+            transition: 1s;
+        }
+
+        nav > ul > li:hover .sub {
+            height: 150px;
+        }
+
+        div {
+            background-color: #4F6F52;
+            width: 900px;
+            padding: 90px 80px;
+            border-radius: 25px;
+            min-height: 50vh;
+            position: relative;
+            margin: auto;
+        }
+
+        #click {
+            width: 35%;
+            height: 35vh;
+            margin: auto;
+            background-color: #E8DFCA;
+            padding: 30px;
+            border-radius: 25px;
+            border: 3px solid rgb(66, 87, 66);
+            position: relative;
+            box-shadow: 2px 2px 5px #3f3f3f;
+        }
+
+        #click h2 {
+            color: #fff;
+        }
+
+        #click button {
+            padding: 10px 20px;
+            border: none;
+            border-radius: 25px;
+            background-color: #304232;
+            color: #fff;
+            position: absolute;
+            bottom: 5%;
+            right: 5%;
+            cursor: pointer;
+        }
+
+        button {
+            padding: 10px 20px;
+            border: none;
+            border-radius: 25px;
+            background-color: #304232;
+            color: #fff;
+            position: absolute;
+            bottom: 5%;
+            right: 5%;
+            cursor: pointer;
+        }
+
+    </style>
+</head>
+<body>
+    <nav>
+        <ul>
+            <li><a href="#" class="main">MENU 1</a>
+                <ul class="sub">
+                    <li><a href="#">SUB 1</a></li>
+                    <li><a href="#">SUB 2</a></li>
+                    <li><a href="#">SUB 3</a></li>
+                </ul>
+            </li>
+            <li><a href="#" class="main">MENU 2</a>
+                <ul class="sub">
+                    <li><a href="#">SUB 1</a></li>
+                    <li><a href="#">SUB 2</a></li>
+                    <li><a href="#">SUB 3</a></li>
+                </ul>
+            </li>
+            <li><a href="#" class="main">MENU 3</a>
+                <ul class="sub">
+                    <li><a href="#">SUB 1</a></li>
+                    <li><a href="#">SUB 2</a></li>
+                    <li><a href="#">SUB 3</a></li>
+                </ul>
+            </li>
+        </ul>
+    </nav>
+    <div>
+        <section id="click">
+            <h2>NOTICE</h2>
+            <button type="button" onclick="aler1()">CLOSE</button>
+        </section>
+
+        <button type="button" onclick="close1()">OPEN</button>
+    </div>
+
+
+    <script>
+        function close1() {
+            document.getElementById("click").style.display = 'block';
+        }
+
+        function aler1() {
+            //alert('div\n영역입니다.')
+            document.getElementById("click").style.display = 'none';
+        }
+    </script>
+</body>
+</html>

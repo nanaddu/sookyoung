@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JAVASCRIPT</title>
+
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Gaegu&display=swap');
+
+        * {
+            padding: 0;
+            margin: 0;
+        }
+
+        body {
+            margin-top: 10%;
+        }
+
+        section {
+            max-width: 900px;
+            margin: auto;
+            border: 1px solid skyblue;
+            border-radius: 20px;
+            padding: 50px;
+            display: flex;
+            align-items: center;
+        }
+
+        ol {
+            flex: 2;
+            list-style: none;
+        }
+
+        ol li {
+            padding: 5px;
+            background-color: lightskyblue;
+            border-radius: 30px;
+            padding-left: 20px;
+            color: #fff;
+            margin-bottom: 5px;
+            box-shadow: 1px 1px 5px #ccc;
+            transition: 0.5s;
+            cursor: pointer;
+            font-family: "Gaegu", sans-serif;
+        }
+
+        li:hover {
+            transform: rotate(10deg);
+        }
+
+        h1 {
+            flex: 1;
+            font-family: "Gaegu", sans-serif;
+            color: skyblue;
+        }
+
+        p {
+            flex: 1;
+            padding: 20px;
+            text-align: center;
+            font-family: "Gaegu", sans-serif;
+            font-size: 20px;
+            
+        }
+
+        .gaegu-regular {
+            font-family: "Gaegu", sans-serif;
+            font-weight: 400;
+            font-style: normal;
+        }
+    </style>
+</head>
+
+<body>
+    <section>
+        <h1>반응형 웹 퍼블리싱 학습</h1>
+        <ol>
+            <li>HTML</li>
+            <li>CSS</li>
+            <li>JAVASCRIPT</li>
+            <li>JQUERY</li>
+            <li>EXERCIES</li>
+        </ol>
+        <ol>
+            <li>HTML</li>
+            <li>CSS</li>
+            <li>JAVASCRIPT</li>
+            <li>JQUERY</li>
+            <li>EXERCIES</li>
+        </ol>
+
+        <p>111111</p>
+        <p>111111</p>
+        <p>111111</p>
+
+    </section>
+
+    <script>
+        let sum = 0;
+        for(let i=0; i<=10; i++) {
+            sum += i; //sum = sum + i
+        }
+
+        console.log(sum); // 55
+
+        const x = document.querySelectorAll('ol li'); // object
+        const y = "LINCOM";
+        const z = 41;
+
+        for(let i = 0; i < 5; i++){
+            x[i].style.border = '1px solid green';
+            console.log(typeof i); //number 반환한다.
+        }
+        
+        console.log(typeof x); // object
+        console.log(typeof y); //(string) 문자열
+        console.log(typeof z); // number 숫자
+
+        console.log(typeof i); // undefined 정의 되어 있지 않음. i 를 알 수 없음
+
+        const obj = {}; // object 생성 (태그 요소는 오브젝트로 인식함)
+        obj.name = '김수경';
+        obj.age;
+        console.log(typeof obj);
+        console.log(obj.name);
+
+        const shop = {};
+        shop.myBag = 20;
+        shop.myAge = 25;
+
+        console.log(shop);
+        
+        const linecom = {address: 'ANSAN' , age: 7};
+        console.log(linecom.age);
+
+        document.querySelectorAll('p')[0].innerHTML = linecom.age;
+    </script>
+</body>
+
+</html>

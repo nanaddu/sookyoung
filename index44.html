@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SAMPLE</title>
+    <link rel="stylesheet" href="/style.css">
+</head>
+
+<body>
+    <div id="layout">
+        <header>
+            <nav>
+                <ul>
+                    <li><a href="#" class="main">MENU 1</a>
+                        <ul class="sub">
+                            <li><a href="#">SUB 1</a></li>
+                            <li id="red"><a href="#" onclick="red1()">SUB 2</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#" class="main">MENU 2</a>
+                        <ul class="sub">
+                            <li><a href="#">SUB 1</a></li>
+                            <li><a href="#">SUB 2</a></li>
+                            <li><a href="#">SUB 3</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#" class="main">MENU 3</a>
+                        <ul class="sub">
+                            <li><a href="#">SUB 1</a></li>
+                            <li><a href="#">SUB 2</a></li>
+                            <li><a href="#">SUB 3</a></li>
+                            <li id="blue"><a href="#">SUB 4</a></li>
+                            <li><a href="#">SUB 5</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#" class="main">MENU 4</a>
+                        <ul class="sub">
+                            <li id="pink"><a href="#" onclick="pink1()">SUB 1</a></li>
+                            <li><a href="#">SUB 2</a></li>
+                            <li><a href="#">SUB 3</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#" class="main">MENU 5</a>
+                        <ul class="sub">
+                            <li><a href="#">SUB 1</a></li>
+                            <li><a href="#">SUB 2</a></li>
+                            <li><a href="#">SUB 3</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </nav>
+        </header>
+        <main>
+            <img src="images/summer.jpg">
+        </main>
+        <footer></footer>
+        <section id="notice">
+            <h3>NOTICE</h3>
+            <button type="button" onclick="close1()">CLOSE</button>
+        </section>
+        
+        <button type="button" onclick="open1()">OPEN</button>
+    </div>
+
+    <script src="/click.js"></script>
+</body>
+</html>

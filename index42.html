@@ -66,19 +66,15 @@
         main section {
             flex: 2;
             background-color: rgb(48, 112, 38);
-            padding: 90px 50px;
+            padding: 360px 50px;
             margin: 10px;
             border-radius: 25px;
-            /* display: flex;
-            align-items: center;*/ 
+            display: flex;
+            align-items: center;
         }
 
-        /* section h2 {
+        section h2 {
             margin: auto;
-        }*/
-
-        section ul {
-            list-style: none;
         }
 
         main .right {
@@ -117,17 +113,6 @@
             padding: 10px;
         }
 
-        audio {
-            width: 100%;
-            margin-top: 20px;
-        }
-
-        video {
-            width: 100%;
-            height: 50%;
-            margin-top: 20px;
-        }
-
         @media (max-width: 650px) {
             header {
                 flex-direction: column;
@@ -145,10 +130,6 @@
 
             main {
                 flex-direction: column;
-            }
-
-            main section {
-                padding: 80px 10px;
             }
 
             footer address {
@@ -181,21 +162,9 @@
         <main>
             <section>
                 <h2>CONTENT 1</h2>
-                <audio controls>
-                    <source src="media/radiant.mp3" type="audio/mpeg">
-                </audio>
-                <video controls>
-                    <source src="media/sea.mp4" type="video/mp4">
-                </video>
             </section>
             <section>
                 <h2>CONTENT 2</h2>
-                <audio controls>
-                    <source src="media/horse.mp3" type="audio/mpeg">
-                </audio>
-                <video controls>
-                    <source src="media/movie.mp4" type="video/mp4">
-                </video>
             </section>
 
             <div class="right">
@@ -212,30 +181,6 @@
             <p>COPYRIGHT ⓒ ALL RIGHTS RESERVED.</p>
         </footer>
     </div>
-
-    <script>
-
-        const $h2 = document.querySelector("main section:first-child h2");
-        const $h3 = document.querySelector("main section:nth-child(2) h2");
-
-        $h2.innerHTML += "<br> <b style='font-size:0.8em; color:yellow;'>PLUS TAG</b>"
-
-
-        const $p = document.createElement("p");
-        $h2.after($p);
-        $p.innerHTML += "PLUS TAG ++"
-
-        const $div = document.createElement("div");
-        $h3.before($div);
-        $div.innerHTML = "plus"
-
-        const $pp = document.querySelector("section p");
-
-        const $ul = document.createElement("ul");
-        $ul.innerHTML += "<li>BANANA</li><li>MELON</li><li>LEMON</li>"
-        $pp.after($ul);
-
-    </script>
 </body>
 
 </html>

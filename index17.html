@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JAVASCRIPT</title>
+
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Gaegu&display=swap');
+
+        * {
+            padding: 0;
+            margin: 0;
+        }
+
+        body {
+            margin-top: 10%;
+        }
+
+        section {
+            max-width: 900px;
+            margin: auto;
+            border: 1px solid skyblue;
+            border-radius: 20px;
+            padding: 50px;
+            display: flex;
+            align-items: center;
+        }
+
+        ol {
+            flex: 2;
+            list-style: none;
+        }
+
+        ol li {
+            padding: 5px;
+            background-color: lightskyblue;
+            border-radius: 30px;
+            padding-left: 20px;
+            color: #fff;
+            margin-bottom: 5px;
+            box-shadow: 1px 1px 5px #ccc;
+            transition: 0.5s;
+            cursor: pointer;
+            font-family: "Gaegu", sans-serif;
+        }
+
+        li:hover {
+            transform: rotate(10deg);
+        }
+
+        h1 {
+            flex: 1;
+            font-family: "Gaegu", sans-serif;
+            color: skyblue;
+        }
+
+        p {
+            flex: 1;
+            padding: 20px;
+            text-align: center;
+            font-family: "Gaegu", sans-serif;
+            font-size: 20px;
+            
+        }
+
+        .gaegu-regular {
+            font-family: "Gaegu", sans-serif;
+            font-weight: 400;
+            font-style: normal;
+        }
+    </style>
+</head>
+
+<body>
+    <section>
+        <h1>반응형 웹 퍼블리싱 학습</h1>
+        <ol>
+            <li>HTML</li>
+            <li>CSS</li>
+            <li>JAVASCRIPT</li>
+            <li>JQUERY</li>
+            <li>EXERCIES</li>
+        </ol>
+        <ol>
+            <li>HTML</li>
+            <li>CSS</li>
+            <li>JAVASCRIPT</li>
+            <li>JQUERY</li>
+            <li>EXERCIES</li>
+        </ol>
+
+        <p>111111</p>
+        <p>111111</p>
+        <p>111111</p>
+
+    </section>
+
+    <script>
+        let sum = 0;
+        for(let i=0; i<=10; i++) {
+            sum += i; //sum = sum + i
+        }
+
+        console.log(sum); // 55
+
+        const x = document.querySelectorAll('ol li'); // object
+        x[8].style.border = '1px solid green';
+        x[9].style.border = '1px solid green';
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SAMPLE</title>
+</head>
+
+<style>
+    @import url('https://fonts.googleapis.com/css2?family=Gamja+Flower&display=swap');
+
+    * {
+        padding: 0;
+        margin: 0;
+    }
+
+    table {
+        width: 100%;
+        border-collapse: collapse;
+        max-width: 500px;
+        margin: auto;
+    }
+
+    td,
+    th {
+        border: 1px solid green;
+        text-align: center;
+        font-family: "Gamja Flower", sans-serif;
+        font-size: 16pt;
+        padding: 10px 0;
+    }
+
+    .c1 {
+        background-color: pink;
+    }
+
+    .c2 {
+        background-color: gold;
+    }
+
+    thead tr>th {
+        background-color: skyblue;
+    }
+
+    .gamja-flower-regular {
+        font-family: "Gamja Flower", sans-serif;
+        font-weight: 400;
+        font-style: normal;
+    }
+</style>
+
+<body>
+    <table>
+        <colgroup>
+            <col class="c1">
+            <col class="c2">
+        </colgroup>
+
+        <thead>
+            <tr>
+                <th colspan="2">과목</th>
+                <!---<th>점수</th>---->
+            </tr>
+            <tr>
+                <th colspan="2">2024-05-30</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <th rowspan="2">HTML + CSS</th>
+                <td id="s1">93점</td>
+            </tr>
+            <tr>
+                <!---<th>CSS</th>--->
+                <td id="s2">92점</td>
+            </tr>
+        </tbody>
+        <tfoot>
+            <tr>
+                <th>구구단</th>
+                <td id="s3" rowspan="2"></td>
+            </tr>
+            <tr>
+                <th>구구단</th>
+                <!---<td id="s3"></td>--->
+            </tr>
+        </tfoot>
+    </table>
+
+    <script>
+
+        
+
+    </script>
+</body>
+    
+</html>

@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JAVASCRIPT</title>
+
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Gaegu&display=swap');
+
+        * {
+            padding: 0;
+            margin: 0;
+        }
+
+        section {
+            max-width: 600px;
+            margin: auto;
+            border: 1px solid skyblue;
+            border-radius: 20px;
+            padding: 50px;
+            display: flex;
+            align-items: center;
+        }
+
+        ol {
+            flex: 1;
+            list-style: none;
+        }
+
+        ol li {
+            padding: 5px;
+            background-color: lightskyblue;
+            border-radius: 30px;
+            padding-left: 20px;
+            color: #fff;
+            margin-bottom: 5px;
+            box-shadow: 1px 1px 5px #ccc;
+            transition: 0.5s;
+            cursor: pointer;
+            font-family: "Gaegu", sans-serif;
+        }
+
+        li:hover {
+            transform: rotate(10deg);
+        }
+
+        h1 {
+            flex: 2;
+            font-family: "Gaegu", sans-serif;
+            color: skyblue;
+        }
+
+        p {
+            flex: 1;
+            padding: 20px;
+            text-align: center;
+            
+        }
+
+        .gaegu-regular {
+            font-family: "Gaegu", sans-serif;
+            font-weight: 400;
+            font-style: normal;
+        }
+    </style>
+</head>
+
+<body>
+    <section>
+        <h1>반응형 웹 퍼블리싱 학습 순서</h1>
+        <ol>
+            <li>HTML</li>
+            <li>CSS</li>
+            <li>JAVASCRIPT</li>
+            <li>JQUERY</li>
+            <li>EXERCIES</li>
+        </ol>
+
+        <p>111111</p>
+    </section>
+
+    <script>
+        document.write('WEB SITE LIST');
+        //alert('JAVASCRIPT START');
+        console.log(32 + 4);
+        //confirm('정말 삭제하시겠습니까?');
+
+        let x = 25; // 변수 선언
+        x = 40; // 재할당
+        
+        const y = 77; // 엄격한 변수 선언 (영원한 변수 선언)
+        // y = 7; 재할당 에러
+        console.log(x+y);
+        document.write(x+y);
+
+        
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SAMPLE</title>
+
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Freeman&display=swap');
+
+        body {
+            position: relative;
+            width: 100vw;
+            height: 100vh;
+            margin: 0;
+            padding: 0;
+            font-family: "Freeman", sans-serif;
+        }
+
+        header {
+            max-width: 400px;
+            margin: auto;
+            text-align: center;
+            color: rgb(167, 78, 94);
+            padding: 50px;
+            border: 3px solid rgb(205, 141, 151);
+            border-radius: 25px;
+        }
+
+        footer {
+            max-width: 400px;
+            margin: auto;
+            text-align: center;
+            color: rgb(167, 78, 94);
+            padding: 50px;
+            border: 3px solid rgb(205, 141, 151);
+            border-radius: 25px;
+        }
+
+        form {
+            max-width: 400px;
+            margin: auto;
+            background-color: rgb(205, 141, 151);
+            padding: 50px 50px;
+            text-align: center;
+            border-radius: 25px;
+        }
+
+        legend {
+            font-size: 2em;
+            font-weight: bold;
+        }
+
+        fieldset {
+            color: #fff;
+            border: 3px solid #fff;
+            border-radius: 25px;
+            padding: 40px 20px;
+        }
+
+        .btn {
+            display: inline-block;
+        }
+
+        #bbtn1 {
+            background-color: rgb(167, 78, 94);
+            color: #fff;
+            font-family: "Freeman", sans-serif;
+            padding: 10px 30px;
+        }
+
+        #bbtn2 {
+            background-color: rgb(167, 78, 94);
+            color: #fff;
+            font-family: "Freeman", sans-serif;
+            padding: 10px 30px;
+        }
+
+        #bbtn3 {
+            background-color: rgb(167, 78, 94);
+            color: #fff;
+            font-family: "Freeman", sans-serif;
+            padding: 10px 30px;
+        }
+
+        input {
+            border: none;
+            padding: 5px 10px;
+            border-radius: 25px;
+            background-color: #fff;
+        }
+
+        #cs {
+            padding: 0;
+            border-radius: 10px;
+            margin-top: 50px;
+            cursor: pointer;
+        }
+
+        .freeman-regular {
+            font-family: "Freeman", sans-serif;
+            font-weight: 400;
+            font-style: normal;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <h1>TYPE</h1>
+    </header>
+    <form action="#" method="post">
+        <fieldset>
+            <legend>TYPE</legend>
+            <p>ID : <input type="text" id="id"></p>
+            <p>PW : <input type="password"></p>
+            <p>Search : <input type="search"></p>
+            <p>EMAIL : <input type="email"></p>
+            <p>TEL : <input type="tel"></p>
+            <p>COLOR : <input type="color"></p>
+            <p>quantity : <input type="number" min="1" max="10" value="1"></p>
+            <p>satisfaction : <input type="number" min="1" max="10" value="1"></p>
+            <p>YES<input type="radio" name="receive" checked="checked"> NO<input type="radio" name="receive"
+                    checked="checked"></p>
+            <p>HTML <input type="checkbox" checked="checked"> CSS<input type="checkbox"></p>
+            <p>HOBBY :<br>
+                <span>
+                    <input type="checkbox" id="h1" value="WORK" name="hby"><label for="h1">WORKING</label>
+                    <input type="checkbox" id="h2" value="FISHING" name="hby"><label for="h2">FISHING</label>
+                    <input type="checkbox" id="h3" value="HEALTH" name="hby"><label for="h3">HEALTH</label><br>
+                    <input type="checkbox" id="h4" value="BOOK" name="hby"><label for="h4">BOOK</label>
+                    <input type="checkbox" id="h5" value="MOVIE" name="hby"><label for="h5">MOVIE</label>
+                    <input type="checkbox" id="h6" value="GAME" name="hby"><label for="h6">GAME</label>
+                </span>
+            </p>
+            <p class="btn"><input type="submit" value="SEND" id="bbtn1"></p>
+            <p class="btn"><input type="reset" value="CANCEL" id="bbtn2"></p>
+            <p class="btn"><input type="button" value="CHECK" id="bbtn3"></p>
+            <p><input type="file" id="file"></p>
+            <p><input type="image" src="/SAMPLE/images/btn.png" id="cs"></p>
+        </fieldset>
+    </form>
+
+    <footer id="num"></footer>
+
+    <script>
+        const z = document.querySelector("#id");
+        const y = document.querySelector("#bbtn3");
+        const x = document.querySelector("header > h1");
+
+        y.addEventListener("click", bb);
+        function bb() {
+
+            const hh = document.querySelectorAll("input[name=hby]:checked");
+
+            for (const i of hh) {
+                x.innerHTML += i.value + "..."
+            }
+            // x.innerHTML = z.value;
+        }
+
+        const nu = [10, 20, 30, 40, 50];
+
+        let c = "";
+
+        for (const h of nu) {
+            c += h + "<br>"
+        }
+
+        document.querySelector("#num").innerHTML = c;
+
+    </script>
+</body>
+
+</html>

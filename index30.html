@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SAMPLE</title>
+</head>
+
+<style>
+    @import url('https://fonts.googleapis.com/css2?family=Gamja+Flower&display=swap');
+
+    * {
+        padding: 0;
+        margin: 0;
+    }
+
+    table {
+        width: 100%;
+        border-collapse: collapse;
+        max-width: 500px;
+        margin: auto;
+    }
+
+    td,
+    th {
+        border: 1px solid green;
+        text-align: center;
+        font-family: "Gamja Flower", sans-serif;
+        font-size: 16pt;
+    }
+
+    .c1 {
+        background-color: pink;
+    }
+
+    .c2 {
+        background-color: gold;
+    }
+
+    thead tr>th {
+        background-color: skyblue;
+    }
+
+    .gamja-flower-regular {
+        font-family: "Gamja Flower", sans-serif;
+        font-weight: 400;
+        font-style: normal;
+    }
+</style>
+
+<body>
+    <table>
+        <colgroup>
+            <col class="c1">
+            <col class="c2">
+        </colgroup>
+
+        <thead>
+            <tr>
+                <th>과목</th>
+                <th>점수</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <th>HTML</th>
+                <td id="s1">93점</td>
+            </tr>
+            <tr>
+                <th>CSS</th>
+                <td id="s2">92점</td>
+            </tr>
+        </tbody>
+        <tfoot>
+            <tr>
+                <th>구구단</th>
+                <td id="s3"></td>
+            </tr>
+        </tfoot>
+    </table>
+
+    <script>
+
+        //for 문 연습
+
+        /* for(let i=0; i<10; i++) {
+            alert (i);
+            if(i==3){
+                document.getElementById("s3").innerHTML = i;
+            }
+        } */
+
+        const ss = document.getElementById("s3");
+
+        for(let i=2; i < 10; i++){
+            ss.innerHTML += i + "단 <br>";
+            for(let j=1; j < 10; j++){
+                ss.innerHTML += (i + " X " + j + " = " + (i * j) + "<br>");
+                if(j==9) {
+                    ss.innerHTML += "<br>"
+                }
+            }
+        }
+
+    </script>
+</body>
+    
+</html>

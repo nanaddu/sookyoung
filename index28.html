@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SAMPLE</title>
+</head>
+
+<style>
+    @import url('https://fonts.googleapis.com/css2?family=Gamja+Flower&display=swap');
+
+    * {
+        padding: 0;
+        margin: 0;
+    }
+
+    table {
+        width: 100%;
+        border-collapse: collapse;
+        max-width: 500px;
+        margin: auto;
+    }
+
+    td,
+    th {
+        border: 1px solid green;
+        text-align: center;
+        font-family: "Gamja Flower", sans-serif;
+        font-size: 16pt;
+    }
+
+    .c1 {
+        background-color: pink;
+    }
+
+    .c2 {
+        background-color: gold;
+    }
+
+    thead tr>th {
+        background-color: skyblue;
+    }
+
+    .gamja-flower-regular {
+        font-family: "Gamja Flower", sans-serif;
+        font-weight: 400;
+        font-style: normal;
+    }
+</style>
+
+<body>
+    <table>
+        <colgroup>
+            <col class="c1">
+            <col class="c2">
+        </colgroup>
+
+        <thead>
+            <tr>
+                <th>과목</th>
+                <th>점수</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <th>HTML</th>
+                <td id="s1">93</td>
+            </tr>
+            <tr>
+                <th>CSS</th>
+                <td id="s2">92</td>
+            </tr>
+        </tbody>
+        <tfoot>
+            <tr>
+                <th>평균</th>
+                <td id="s3"></td>
+            </tr>
+        </tfoot>
+    </table>
+
+    <script>
+        const cell_1 = document.getElementById("s1");
+        //cell_1.innerHTML = 93
+
+        const cell_2 = document.getElementById("s2");
+        //cell_2.innerHTML = 92
+
+        const cell_3 = document.getElementById("s3");
+        //cell_3.innerHTML = (93+92)/2;
+
+        //alert(cell_1.innerHTML);
+        //alert(typeof cell_1.innerHTML);
+        //alert(cell_1.innerHTML + 15);
+
+        /* let c2 = Number( cell_1.innerHTML );
+        //alert (typeof c2);
+
+        c2 = --c2;
+        console.log(c2);
+
+        cell_2.innerHTML = c2 */
+
+        const cc1 = Number(cell_1.innerHTML);
+        console.log (cc1);
+
+        const cc2 = Number(cell_2.innerHTML);
+        console.log (cc2);
+
+        cell_3.innerHTML = (cc1 + cc2)/2;
+
+    </script>
+</body>
+    
+</html>

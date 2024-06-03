@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SAMPLE</title>
+</head>
+<body>
+    <h2>HERE YOUR MOUSE</h2>
+    <main>MISSION</main>
+
+    <script>
+        const a1 = 25;
+        const a2 = 37;
+        const $h2 = document.querySelector('h2');
+
+        $h2.addEventListener("mouseover", () => zz());
+
+        zz = () => {$h2.innerHTML = "TEST"}
+
+        const $main = document.querySelector('main');
+
+        $main.addEventListener("mouseenter", () => 
+            $main.innerHTML = 'LINEART'
+        );
+    </script>
+</body>
+</html>

@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SAMPLE</title>
+
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Gamja+Flower&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Freeman&display=swap');
+
+        * {
+            margin: 0;
+            padding: 0;
+            font-family: "Freeman", sans-serif;
+        }
+
+        body {
+            position: relative;
+            width: 100vw;
+            height: 100vh;
+        }
+
+        form {
+            max-width: 600px;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            border: 3px solid rgb(146, 203, 60);
+            padding: 60px 50px;
+            border-radius: 25px;
+            background-color: rgb(146, 203, 60);
+            box-shadow: 10px 10px 0px rgb(125, 180, 43);
+        }
+
+        fieldset {
+            border: 2px solid #fff;
+            padding: 40px 30px;
+            border-radius: 25px;
+        }
+
+        legend {
+            color: #fff;
+            font-size: 1.5em;
+            font-weight: bold;
+        }
+
+        p {
+            color: #fff;
+            font-weight: bold;
+        }
+
+        input {
+            border: none;
+            padding: 5px 10px;
+            border-radius: 25px;
+            margin-bottom: 5px;
+            text-align: center;
+            margin-left: 10px;
+            max-width: 280px;
+        }
+
+        #id {
+            margin-left: 70px;
+        }
+
+        button {
+            position: absolute;
+            top: 84%;
+            right: 25%;
+            border: none;
+            padding: 10px 30px;
+            background-color: rgb(125, 180, 43);
+            color: #fff;
+            border-radius: 25px;
+            cursor: pointer;
+        }
+
+        .button {
+            position: absolute;
+            top: 84%;
+            left: 25%;
+            border: none;
+            padding: 10px 30px;
+            background-color: rgb(125, 180, 43);
+            color: #fff;
+            border-radius: 25px;
+            cursor: pointer;
+        }
+
+        .gamja-flower-regular {
+            font-family: "Gamja Flower", sans-serif;
+            font-weight: 400;
+            font-style: normal;
+        }
+
+        .bebas-neue-regular {
+            font-family: "Bebas Neue", sans-serif;
+            font-weight: 400;
+            font-style: normal;
+        }
+
+        .freeman-regular {
+            font-family: "Freeman", sans-serif;
+            font-weight: 400;
+            font-style: normal;
+        }
+
+        footer {
+            position: absolute;
+            bottom: 30%;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+    </style>
+</head>
+
+<body>
+    <form action="#" method="post">
+        <fieldset>
+            <legend>LOGIN</legend>
+            <p>ID <input type="text" placeholder="ID" id="id" required></p>
+            <p>PASSWORD <input type="password" placeholder="PASSWORD" id="pw" required></p>
+
+            <button type="button">LOGIN</button>
+            <input type="button" value="TEST" class="button">
+        </fieldset>
+    </form>
+    <footer> 111111111 </footer>
+
+    <script>
+        const x = document.querySelector("#id");
+        const y = document.querySelector("#pw");
+        const login = document.querySelector("button");
+
+        login.addEventListener("click" , bb);
+
+        function bb(){
+            // alert (x.value);
+            document.querySelector("footer").innerHTML = x.value + y.value;
+        }
+</script>
+</body>
+
+</html>
